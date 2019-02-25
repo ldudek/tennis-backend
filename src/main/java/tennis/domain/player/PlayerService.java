@@ -14,9 +14,10 @@ public class PlayerService {
     private PlayerDAO playerDAO;
 
     @Transactional
-    public void add(Player player)
+    public Player add(Player player)
     {
         playerDAO.add(player);
+        return player;
     }
 
     @Transactional
